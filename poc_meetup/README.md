@@ -1,7 +1,7 @@
 # poc_meetup
 
 ## Descrição/Description
-Um projeto de teste e desenvolvimento de funcionalidades. 
+Um projeto de teste e experimento de reatividade no Flutter. 
 A test project and functionality developemnt.
 
 
@@ -16,6 +16,7 @@ A test project and functionality developemnt.
 ## Aprendizado
 - ValueNotifier
 - Uso do setState
+- Uso do RxNotifier
 - Aprendizado de reatividade no Flutter usando ValueNotifier e usando setState.
 
 
@@ -23,6 +24,7 @@ A test project and functionality developemnt.
 
 ## Próximos Passos
 - Refatoração do código
+- Uso do RxNotifier
 
 - [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
 - [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
