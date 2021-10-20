@@ -1,17 +1,19 @@
-/* import 'package:flutter/material.dart';
+import 'package:flutter/material.dart';
+import 'package:poc_meetup/home/triple/homepage_store.dart';
+import 'package:poc_meetup/home/triple/typed_text_state.dart';
+import 'package:flutter_triple/flutter_triple.dart';
 
-class MyHomePage extends StatefulWidget {
-  const MyHomePage({Key? key, required this.title}) : super(key: key);
+class MyHomePageTriple extends StatefulWidget {
+  const MyHomePageTriple({Key? key, required this.title}) : super(key: key);
   final String title;
 
   @override
-  State<MyHomePage> createState() => _MyHomePageState();
+  State<MyHomePageTriple> createState() => _MyHomePageTripleState();
 }
 
-class _MyHomePageState extends State<MyHomePage> {
+class _MyHomePageTripleState extends State<MyHomePageTriple> {
+  final homeStore = HomePageStore();
   String typedText = '';
-  bool hasSubmitted = false;
-  //access the form
   final formKey = GlobalKey<FormState>();
 
   @override
@@ -44,11 +46,17 @@ class _MyHomePageState extends State<MyHomePage> {
                 ),
               ],
             ),
-            if (hasSubmitted)
-              Text(
-                'Feliz em estar aqui com a empresa $typedText',
-                style: const TextStyle(fontSize: 18),
+            ScopedBuilder<HomePageStore, HomePageError, HomePageSucess>(
+              store: homeStore,
+              onError: (context, HomePageError? e) => Text('$e.message'),
+              onState: (context, HomePageSucess state) =>
+                  state.data.isEmpty ? Container() : Text(state.data),
+              onLoading: (context) => const Expanded(
+                child: Center(
+                  child: CircularProgressIndicator(),
+                ),
               ),
+            ),
           ],
         ),
       ),
@@ -57,14 +65,10 @@ class _MyHomePageState extends State<MyHomePage> {
         style: ElevatedButton.styleFrom(fixedSize: const Size(350, 30)),
         onPressed: () {
           formKey.currentState!.save();
-
-          setState(() {
-            hasSubmitted = true;
-          });
+          homeStore.typedTextRetrieved(typedText);
         },
         child: const Text('Submit'),
       ),
     );
   }
 }
- */

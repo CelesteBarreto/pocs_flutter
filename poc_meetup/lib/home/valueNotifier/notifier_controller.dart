@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-class HomePageController {
+class ValueNotifierController {
   final text = ValueNotifier<String>('');
   TextEditingController myTextController = TextEditingController();
 

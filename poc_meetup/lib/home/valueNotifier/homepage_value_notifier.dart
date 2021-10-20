@@ -1,20 +1,22 @@
 import 'package:flutter/material.dart';
-import 'package:poc_meetup/home/homepage_controller.dart';
+import 'package:poc_meetup/home/valueNotifier/notifier_controller.dart';
 
-class MyHomePage extends StatefulWidget {
+class MyHomePageValueNotifier extends StatefulWidget {
   final String title;
-  const MyHomePage({Key? key, required this.title}) : super(key: key);
+  const MyHomePageValueNotifier({Key? key, required this.title})
+      : super(key: key);
 
   @override
-  _MyHomePageState createState() => _MyHomePageState();
+  _MyHomePageValueNotifierState createState() =>
+      _MyHomePageValueNotifierState();
 }
 
-class _MyHomePageState extends State<MyHomePage> {
-  HomePageController homePageController = HomePageController();
+class _MyHomePageValueNotifierState extends State<MyHomePageValueNotifier> {
+  ValueNotifierController notifierController = ValueNotifierController();
 
   @override
   void dispose() {
-    homePageController.disposeController();
+    notifierController.disposeController();
     super.dispose();
   }
 
@@ -31,13 +33,13 @@ class _MyHomePageState extends State<MyHomePage> {
             SizedBox(
               width: 200,
               child: ValueListenableBuilder(
-                valueListenable: homePageController.text,
+                valueListenable: notifierController.text,
                 builder:
                     (BuildContext context, String typedText, Widget? child) {
                   return Column(
                     children: [
                       TextFormField(
-                          controller: homePageController.myTextController,
+                          controller: notifierController.myTextController,
                           decoration: const InputDecoration(
                               labelText: 'Company Name: ')),
                       const SizedBox(
@@ -59,7 +61,7 @@ class _MyHomePageState extends State<MyHomePage> {
       floatingActionButton: ElevatedButton(
           style: ElevatedButton.styleFrom(fixedSize: const Size(350, 30)),
           onPressed: () {
-            homePageController.updateText();
+            notifierController.updateText();
           },
           child: const Text('Submit')),
     );

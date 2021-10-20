@@ -1,15 +1,15 @@
-/* import 'package:flutter/material.dart';
+import 'package:flutter/material.dart';
 import 'package:rx_notifier/rx_notifier.dart';
 
-class MyHomePage extends StatefulWidget {
+class MyHomePageRxNotifier extends StatefulWidget {
   final String title;
-  const MyHomePage({Key? key, required this.title}) : super(key: key);
+  const MyHomePageRxNotifier({Key? key, required this.title}) : super(key: key);
 
   @override
-  _MyHomePageState createState() => _MyHomePageState();
+  _MyHomePageRxNotifierState createState() => _MyHomePageRxNotifierState();
 }
 
-class _MyHomePageState extends State<MyHomePage> {
+class _MyHomePageRxNotifierState extends State<MyHomePageRxNotifier> {
   TextEditingController typeTextController = TextEditingController();
   final text = RxNotifier<String>('');
   String get textChanges => text.value;
@@ -17,7 +17,7 @@ class _MyHomePageState extends State<MyHomePage> {
 
   @override
   void initState() {
-    rxObserver(() => print(textChanges));
+    rxObserver(() => textChanges);
     super.initState();
   }
 
@@ -71,4 +71,3 @@ class _MyHomePageState extends State<MyHomePage> {
     );
   }
 }
- */
