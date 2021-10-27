@@ -18,7 +18,7 @@ A test project and functionality developemnt.
 - Uso do setState
 - Uso do RxNotifier
 - Aprendizado de reatividade no Flutter usando ValueNotifier e usando setState.
-- Uso do Triple, polimosfirmo e store
+- Uso do Triple, polimosfismo e store
 
 <br>
 
