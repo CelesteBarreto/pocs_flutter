@@ -3,9 +3,8 @@
 ## Descrição/Description
 Pos que faz o cálculo do IMC usando padrão de projeto MVC
 
-<p align="center">
+
 ![](./assets/imc_record.gif)
-</p>
 
 
 ## Widgets
