@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:poc_imc/homepage.dart';
+import 'package:poc_imc/view/homepage.dart';
 
 void main() {
   runApp(const MyApp());

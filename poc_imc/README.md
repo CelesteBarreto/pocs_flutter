@@ -1,12 +1,32 @@
-# poc_imc
+# cpf_validation
 
-A new Flutter project.
+## Descrição/Description
+Pos que faz o cálculo do IMC usando padrão de projeto MVC
 
-## Getting Started
+<p align="center">
+    <img width="350" height="625" src="assets/images/screenshot.png">
+</p>
 
-This project is a starting point for a Flutter application.
+## Widgets
+- Visibility
+- GestureDetector
 
-A few resources to get you started if this is your first Flutter project:
+## Desenvolvimento/Development
+- [x] Reatividade de visibilidade de texto, fechar o teclado clicando na tela. Reactivity in text visibility, close keyboard.
+- [x] Padrão MC - MVC Pattern
+- [x] Teste para verificação dos inputs. Test to verify inputs.
+
+
+## Aprendizado
+- Usar o MVC como forma de reduzir o acoplamento entre a view e o model e melhorar a organização no código.
+O Model não obtém as informações diretamente da View. Ela envia informações por meio do Controller, que se torna uma ponte entre a Model e a View. Using MVC to reduce accomplish between view and Model and organize your code.
+- O GestureDetector 
+- Aprendizado do teste.
+<br>
+
+## Próximos Passos
+- Refatoração do código - code refactoring
+- validação de campos do formulário - Form validation
 
 - [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
 - [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
