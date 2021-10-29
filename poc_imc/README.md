@@ -4,7 +4,7 @@
 Pos que faz o cálculo do IMC usando padrão de projeto MVC
 
 <p align="center">
-    <img width="350" height="625" src="assets/images/screenshot.png">
+![Alt text](imc_record.gif) / ![](imc_record.gif)
 </p>
 
 ## Widgets
